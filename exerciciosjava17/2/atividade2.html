@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>2</title>
+</head>
+<body>
+    <h1>Cálculo do Cubo</h1>
+	<p>Insira um número para calcular o seu cubo:</p>
+	<input type="text" id="numero">
+	<button onclick="mostrarCubo()">Calcular Cubo</button>
+	<p id="resultado"></p>
+	<script>
+		function cubo(num) {
+			return num ** 3;
+		}
+
+		function mostrarCubo() {
+			let num = parseFloat(document.getElementById("numero").value);
+			//retorna para um numero decimal
+			let cuboNum = cubo(num);
+			document.getElementById("resultado").innerHTML = "O cubo de " + num + " é " + cuboNum;
+		}
+	</script>
+</body>
+</html>
